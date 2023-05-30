@@ -7,3 +7,4 @@ sources:
   tables:
     - name: TABLE1
     - name: TABLE2
+    - name: BOOKCSV

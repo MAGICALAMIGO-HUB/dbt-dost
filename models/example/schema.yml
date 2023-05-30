@@ -19,3 +19,15 @@ models:
             tests:
                 - unique
                 - not_null
+    - name: custom_model
+      description: 'ASDASDAS'
+      columns:
+          - name: TYPE
+            description: '{{doc("custom_model_id")}}'
+          - name: NAME
+            description: '{{doc("custom_model_name")}}'
+          - name: COUNTRY
+            description: '{{doc("custom_model_age")}}'
+          - name: DATE
+            description: '{{doc("custom_model_age")}}'
+            
