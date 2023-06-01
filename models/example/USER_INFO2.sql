@@ -1,0 +1,1 @@
+select * from  {{ source("sourcename", "USER_INFO") }}

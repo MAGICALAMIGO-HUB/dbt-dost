@@ -28,13 +28,28 @@ clean-targets:         # directories to be removed by `dbt clean`
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
 
+
+on-run-start: "INSERT INTO MEROMAYA.MUTU.HOOK (audit_type) VALUES ('anish')"
+
+on-run-end:
+  "INSERT INTO MEROMAYA.MUTU.HOOK (audit_type) VALUES ('anish2')"
+
+
 # In this example config, we tell dbt to build all models in the example/ directory
 # as tables. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
 models:
+  schema: MUTU
   my_new_project:
     # Applies to all files under models/example/
     example:
+      schema: MUTU
       materialized: view
 vars:
   VARIABLEglob : 'ANISH'
+  today_and_yesterday : [
+    current_date(),
+    DATEADD(Day ,-1, current_date())
+  ]
+
+

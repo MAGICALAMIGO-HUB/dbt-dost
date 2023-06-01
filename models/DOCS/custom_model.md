@@ -7,3 +7,10 @@ This is my name of my table
 {% docs custom_model_age %}
 This is my age of my table
 {% enddocs %}
+
+{% docs from_myside %}
+BOOKCSV
+{% enddocs %}
+{% docs fro_test %}
+Nepal
+{% enddocs %}
