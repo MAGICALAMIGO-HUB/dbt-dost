@@ -1,0 +1,13 @@
+
+version: 2
+sources:
+- name: sourcename # required
+  description: 'testing purpose'
+  database: MEROMAYA
+  schema: MUTU
+  tables:
+    - name: TABLE1
+    - name: TABLE2
+    - name: USER_INFO
+    - name: BOOKCSV
+      description: '{{doc("from_myside")}}'
